@@ -17,7 +17,7 @@ st.title("Predictor of Skip metastasis in papillary thyroid cancer ")
 Age = st.selectbox("Age:", options=[0, 1], format_func=lambda x: 'Age < 55 (0)' if x == 0 else 'Age ≥ 55 (1)')
 
 # Max_Diameter: categorical selection (≥10mm=1, <10mm=0)
-Max_Diameter = st.selectbox("Max Diameter:", options=[0, 1], format_func=lambda x: 'Diameter < 10mm (0)' if x == 0 else 'Diameter ≥ 10mm (1)')
+Max_Diameter = st.selectbox("Max Diameter:", options=[0, 1], format_func=lambda x: 'Diameter ≤ 1cm (0)' if x == 0 else 'Diameter > 1cm (1)')
 
 # Tumor_Location: categorical selection (1=Upper, 2=Middle, 3=Lower)
 Tumor_Location = st.selectbox("Tumor Location:", options=[1, 2, 3], format_func=lambda x: {1:'Upper (1)', 2:'Middle (2)', 3:'Lower (3)'}[x])
