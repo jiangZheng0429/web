@@ -8,7 +8,7 @@ import os
 # Load the model
 model = joblib.load("XGBoost.pkl")
 feature_names = [
-    "Age", "Max_Diameter", "Tumor_Location", "Multifocality", "PLR","Extrathyroidal_extension","SII"]
+    "Age", "Max_Diameter", "Tumor_Location", "Multifocality", "Extrathyroidal_extension","PLR","SII"]
 
 # Streamlit user interface
 st.title("Predictor of Skip metastasis in papillary thyroid cancer ")
@@ -77,3 +77,4 @@ if st.button("Predict"):
     plt.savefig("shap_force_plot.png", bbox_inches='tight', dpi=1200)
 
     st.image("shap_force_plot.png")
+
